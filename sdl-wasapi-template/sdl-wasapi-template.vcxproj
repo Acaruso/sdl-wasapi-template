@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- main -->
+  <ItemGroup>
+    <ClCompile Include="C:\cpp-libraries\SDL_FontCache-master\SDL_FontCache.c" />
+    <ClCompile Include="src/main/app/app.cpp" />
+    <ClCompile Include="src/main/callback/callback.cpp" />
+    <ClCompile Include="src/main/graphics_wrapper/draw_commands.cpp" />
+    <ClCompile Include="src/main/graphics_wrapper/draw_system.cpp" />
+    <ClCompile Include="src/main/graphics_wrapper/graphics_wrapper.cpp" />
+    <ClCompile Include="src/main/main.cpp" />
+    <ClCompile Include="src/main/systems/input_system/input_system.cpp" />
+    <ClCompile Include="src/main/ui_elements/rect_elt.cpp" />
+    <ClCompile Include="src/main/ui_elements/text_elt.cpp" />
+    <ClCompile Include="src/main/ui_elements/image_elt.cpp" />
+    <ClCompile Include="src/main/util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src/main/app/app.hpp" />
+    <ClInclude Include="src/main/app/app_context.hpp" />
+    <ClInclude Include="src/main/callback/callback.hpp" />
+    <ClInclude Include="src/main/graphics_wrapper/draw_commands.hpp" />
+    <ClInclude Include="src/main/graphics_wrapper/draw_system.hpp" />
+    <ClInclude Include="src/main/graphics_wrapper/font.hpp" />
+    <ClInclude Include="src/main/graphics_wrapper/graphics_wrapper.hpp" />
+    <ClInclude Include="src/main/graphics_wrapper/image.hpp" />
+    <ClInclude Include="src/main/store/color.hpp" />
+    <ClInclude Include="src/main/store/coord.hpp" />
+    <ClInclude Include="src/main/store/rect.hpp" />
+    <ClInclude Include="src/main/store/store.hpp" />
+    <ClInclude Include="src/main/systems/input_system/input_system.hpp" />
+    <ClInclude Include="src/main/ui_elements/rect_elt.hpp" />
+    <ClInclude Include="src/main/ui_elements/text_elt.hpp" />
+    <ClInclude Include="src/main/ui_elements/image_elt.hpp" />
+    <ClInclude Include="src/main/util.hpp" />
+  </ItemGroup>
+
+  <!-- audio -->
+  <ItemGroup>
+    <ClCompile Include="src/audio/audio_entrypoint.cpp" />
+    <ClCompile Include="src/audio/audio_system/audio_system.cpp" />
+    <ClCompile Include="src/audio/audio_system/init.cpp" />
+    <ClCompile Include="src/audio/playback_system/playback_system.cpp" />
+    <ClCompile Include="src/audio/callback/audio_callback.cpp" />
+    <ClCompile Include="src/audio/audio_util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src/audio/audio_entrypoint.hpp" />
+    <ClInclude Include="src/audio/audio_system/audio_system.hpp" />
+    <ClInclude Include="src/audio/audio_system/init.hpp" />
+    <ClInclude Include="src/audio/playback_system/playback_system.hpp" />
+    <ClInclude Include="src/audio/playback_system/playback_system_context.hpp" />
+    <ClInclude Include="src/audio/callback/audio_callback.hpp" />
+    <ClInclude Include="src/audio/sample_buffer.hpp" />
+    <ClInclude Include="src/audio/audio_util.hpp" />
+  </ItemGroup>
+
+  <!-- 3rd party libraries -->
+  <ItemGroup>
+    <ClInclude Include="src/lib/atomicops.h" />
+    <ClInclude Include="src/lib/readerwriterqueue.h" />
+  </ItemGroup>
+
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d07fb918-8223-4c74-a7e6-89beed503f96}</ProjectGuid>
+    <RootNamespace>sdl-wasapi-template</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\cpp-libraries\SDL2-2.0.12\include;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);C:\cpp-libraries\SDL2-2.0.12\lib\x64;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+
+  <!-- libraries -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\cpp-libraries\SDL2-2.0.12\include;C:\cpp-libraries\asio-1.18.0\include;C:\cpp-libraries\oscpp-master\include;C:\cpp-libraries\SDL2_image-2.0.5\include;C:\cpp-libraries\SDL2_ttf-2.0.15\include;C:\cpp-libraries\SDL_FontCache-master;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\cpp-libraries\SDL2-2.0.12\lib\x64;C:\cpp-libraries\SDL2_image-2.0.5\lib\x64;C:\cpp-libraries\SDL2_ttf-2.0.15\lib\x64;</LibraryPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDL2.lib; SDL2main.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- additional dependencies -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <!-- use cpp17 -->
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;avrt.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
